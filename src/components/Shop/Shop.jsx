@@ -6,7 +6,6 @@ export default function Shop() {
   return (
     <>
       <h1>Shop</h1>
-      <Link to={"/home"}>Home</Link>
       <ul>
         {data?.map((item) => {
           return <li key={item.id}>{item.title}</li>;

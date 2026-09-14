@@ -39,6 +39,7 @@ export default function Layout() {
         <nav>
           <NavLink to="home">Home</NavLink>
           <NavLink to="shop">Shop</NavLink>
+          <NavLink to="cart">Cart</NavLink>
         </nav>
       </header>
       <main>
