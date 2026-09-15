@@ -5,6 +5,7 @@ export default function Layout() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+  const [cart, setCart] = useState(new Map());
   const url = "https://fakestoreapi.com/products";
 
   useEffect(() => {
@@ -40,10 +41,11 @@ export default function Layout() {
           <NavLink to="home">Home</NavLink>
           <NavLink to="shop">Shop</NavLink>
           <NavLink to="cart">Cart</NavLink>
+          <div>{cart.size}</div>
         </nav>
       </header>
       <main>
-        <Outlet context={{ data, setData }}></Outlet>
+        <Outlet context={{ data, setData, cart, setCart }}></Outlet>
       </main>
     </div>
   );
