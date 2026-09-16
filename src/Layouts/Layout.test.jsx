@@ -26,14 +26,16 @@ describe("Navigation Flow", () => {
   test("navigates from Home to Shop page", async () => {
     const { user } = setup();
 
-    const homeHeading = await screen.findByRole("heading", { name: /home/i });
+    const homeHeading = await screen.findByRole("heading", {
+      name: /welcome/i,
+    });
     expect(homeHeading).toBeInTheDocument();
 
     const shopLink = await screen.findByRole("link", { name: /shop/i });
     await user.click(shopLink);
 
     expect(
-      await screen.findByRole("heading", { name: /shop/i }),
+      await screen.findByRole("heading", { name: "Shop Products" }),
     ).toBeInTheDocument();
     expect(
       screen.queryByRole("heading", { name: /home/i }),
@@ -50,10 +52,10 @@ describe("Navigation Flow", () => {
     await user.click(cartLink);
 
     expect(
-      await screen.findByRole("heading", { name: /cart/i }),
+      await screen.findByRole("heading", { name: "Your Shopping Cart" }),
     ).toBeInTheDocument();
     expect(
-      screen.queryByRole("heading", { name: /shop/i }),
+      screen.queryByRole("heading", { name: "Shop Products" }),
     ).not.toBeInTheDocument();
   });
 });

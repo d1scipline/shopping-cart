@@ -16,7 +16,7 @@ export default function Shop() {
 
   return (
     <>
-      <h1>Shop</h1>
+      <h1>Shop Products</h1>
       <div className="shop-products">
         {data?.map((item) => {
           return (
