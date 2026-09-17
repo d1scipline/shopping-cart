@@ -1,9 +1,4 @@
-import {
-  getByAltText,
-  getByText,
-  render,
-  screen,
-} from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import ShopProduct from "./ShopProduct";
 import { describe, expect, vi } from "vitest";

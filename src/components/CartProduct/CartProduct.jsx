@@ -10,7 +10,12 @@ export default function CartProduct({
 }) {
   return (
     <div>
-      <img src={image} alt={image}></img>
+      <img
+        role="img"
+        aria-label={"image of " + title}
+        src={image}
+        alt={"image of " + title}
+      ></img>
       <div>
         <span>{title}</span>
         <span>{price.toFixed(2)}$</span>
