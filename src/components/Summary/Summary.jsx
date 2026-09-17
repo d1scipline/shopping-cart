@@ -21,7 +21,7 @@ export default function Summary({ cart, data }) {
       <span>Order Summary</span>
       {cartItems.map((item) => {
         return (
-          <div>
+          <div key={item.id}>
             <div>
               <span>{data[item.id - 1].title}</span>
               <span>x{item.quantity}</span>
