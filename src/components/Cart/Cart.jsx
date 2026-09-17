@@ -32,6 +32,7 @@ export default function Cart() {
         key={id}
         title={data[id - 1].title}
         image={data[id - 1].image}
+        price={data[id - 1].price}
         increaseQuantity={increaseQuantity}
         decreaseQuantity={decreaseQuantity}
         deleteProduct={deleteProduct}
@@ -45,7 +46,7 @@ export default function Cart() {
       {cart.size !== 0 ? (
         <>
           <div>{cartItems}</div>
-          <Summary></Summary>
+          <Summary cart={cart} data={data}></Summary>
         </>
       ) : (
         <>

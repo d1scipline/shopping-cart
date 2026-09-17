@@ -1,7 +1,7 @@
 import { isDisabled } from "@testing-library/user-event/dist/cjs/utils/index.js";
 import { useState } from "react";
 
-export default function ShopProduct({ image, title, id, addToCart }) {
+export default function ShopProduct({ image, title, price, id, addToCart }) {
   const [quantity, setQuantity] = useState(1);
 
   function handleKeyDown(e) {
@@ -39,6 +39,7 @@ export default function ShopProduct({ image, title, id, addToCart }) {
     <div className="shop-product">
       <img src={image} alt={title} />
       <span>{title}</span>
+      <span>{price}$</span>
       <div>
         <button
           type="button"

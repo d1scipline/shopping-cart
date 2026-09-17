@@ -6,12 +6,14 @@ export default function CartProduct({
   increaseQuantity,
   decreaseQuantity,
   deleteProduct,
+  price,
 }) {
   return (
     <div>
       <img src={image} alt={image}></img>
       <div>
         <span>{title}</span>
+        <span>{price}$</span>
         {quantity == 1 ? (
           <button disabled>-</button>
         ) : (
