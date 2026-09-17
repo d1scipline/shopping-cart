@@ -1,4 +1,3 @@
-import { isDisabled } from "@testing-library/user-event/dist/cjs/utils/index.js";
 import { useState } from "react";
 
 export default function ShopProduct({ image, title, price, id, addToCart }) {
@@ -42,6 +41,7 @@ export default function ShopProduct({ image, title, price, id, addToCart }) {
       <span>{price.toFixed(2)}$</span>
       <div>
         <button
+          aria-label="decrease quantity"
           type="button"
           onMouseDown={(e) => e.preventDefault()}
           onClick={decrement}
@@ -65,6 +65,7 @@ export default function ShopProduct({ image, title, price, id, addToCart }) {
         />
 
         <button
+          aria-label="increase quantity"
           type="button"
           onMouseDown={(e) => e.preventDefault()}
           onClick={increment}
