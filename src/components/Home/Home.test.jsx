@@ -20,7 +20,7 @@ describe("Home", () => {
     ).toBeInTheDocument();
   });
 
-  it("renders the hero image with proper alt text and source", () => {
+  it("renders the hero image with proper alt text", () => {
     render(<Home />);
 
     const heroImage = screen.getByRole("img", {

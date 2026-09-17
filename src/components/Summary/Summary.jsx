@@ -16,8 +16,6 @@ export default function Summary({ cart, data }) {
     .reduce((a, b) => a + b)
     .toFixed(2);
 
-  console.log(cartItems);
-
   return (
     <div>
       <span>Order Summary</span>

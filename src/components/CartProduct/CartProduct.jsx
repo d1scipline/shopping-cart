@@ -13,7 +13,7 @@ export default function CartProduct({
       <img src={image} alt={image}></img>
       <div>
         <span>{title}</span>
-        <span>{price}$</span>
+        <span>{price.toFixed(2)}$</span>
         {quantity == 1 ? (
           <button disabled>-</button>
         ) : (

@@ -39,7 +39,7 @@ export default function ShopProduct({ image, title, price, id, addToCart }) {
     <div className="shop-product">
       <img src={image} alt={title} />
       <span>{title}</span>
-      <span>{price}$</span>
+      <span>{price.toFixed(2)}$</span>
       <div>
         <button
           type="button"

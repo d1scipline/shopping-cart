@@ -1,5 +1,7 @@
 import { NavLink, Outlet } from "react-router";
 import { useState, useEffect } from "react";
+import LoadingPage from "../components/LoadingPage/LoadingPage";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 
 export default function Layout() {
   const [data, setData] = useState(null);
@@ -27,11 +29,11 @@ export default function Layout() {
   }, []);
 
   if (loading) {
-    return <h1>Loading</h1>;
+    return <LoadingPage></LoadingPage>;
   }
 
   if (error) {
-    return <h1>Error!</h1>;
+    return <ErrorPage></ErrorPage>;
   }
 
   return (
