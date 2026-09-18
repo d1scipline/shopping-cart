@@ -11,6 +11,8 @@ export default function Layout() {
   const [error, setError] = useState(false);
   const [cart, setCart] = useState(new Map());
   const url = "https://fakestoreapi.com/products";
+  const getNavClass = ({ isActive }) =>
+    `${styles.navElement} ${isActive ? styles.active : ""}`;
 
   useEffect(() => {
     fetch(url)
@@ -42,13 +44,13 @@ export default function Layout() {
     <div className={styles.container}>
       <header className={styles.header}>
         <nav className={styles.nav}>
-          <NavLink className={styles.navElement} to="home">
+          <NavLink className={getNavClass} to="home">
             Home
           </NavLink>
-          <NavLink className={styles.navElement} to="shop">
+          <NavLink className={getNavClass} to="shop">
             Shop
           </NavLink>
-          <NavLink className={styles.navElement} to="cart">
+          <NavLink className={getNavClass} to="cart">
             Cart
           </NavLink>
           <div className={styles.cart}>
