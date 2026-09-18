@@ -1,5 +1,6 @@
 import { useOutletContext } from "react-router";
 import ShopProduct from "../ShopProduct/ShopProduct";
+import styles from "./Shop.module.css";
 
 export default function Shop() {
   const { data, cart, setCart } = useOutletContext();
@@ -16,8 +17,8 @@ export default function Shop() {
 
   return (
     <>
-      <h1>Shop Products</h1>
-      <div className="shop-products">
+      <h1 className={styles.heading}>Shop Products</h1>
+      <div className={styles.products}>
         {data?.map((item) => {
           return (
             <ShopProduct

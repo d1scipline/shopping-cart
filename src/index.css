@@ -86,8 +86,11 @@ html {
 * {
   font-family: sans-serif;
 }
-
 * {
   border: 1px solid red;
   margin: 2px;
+}
+
+html {
+  margin-bottom: 32px;
 }
