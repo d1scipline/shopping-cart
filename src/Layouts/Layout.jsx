@@ -2,6 +2,8 @@ import { NavLink, Outlet } from "react-router";
 import { useState, useEffect } from "react";
 import LoadingPage from "../components/LoadingPage/LoadingPage";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import { ShoppingCart } from "lucide-react";
+import styles from "./Layout.module.css";
 
 export default function Layout() {
   const [data, setData] = useState(null);
@@ -37,16 +39,24 @@ export default function Layout() {
   }
 
   return (
-    <div className="root-layout">
-      <header>
-        <nav>
-          <NavLink to="home">Home</NavLink>
-          <NavLink to="shop">Shop</NavLink>
-          <NavLink to="cart">Cart</NavLink>
-          <div>{cart.size}</div>
+    <div className={styles.container}>
+      <header className={styles.header}>
+        <nav className={styles.nav}>
+          <NavLink className={styles.navElement} to="home">
+            Home
+          </NavLink>
+          <NavLink className={styles.navElement} to="shop">
+            Shop
+          </NavLink>
+          <NavLink className={styles.navElement} to="cart">
+            Cart
+          </NavLink>
+          <div className={styles.cart}>
+            <ShoppingCart size={28}></ShoppingCart> {cart.size}
+          </div>
         </nav>
       </header>
-      <main>
+      <main className={styles.main}>
         <Outlet context={{ data, setData, cart, setCart }}></Outlet>
       </main>
     </div>

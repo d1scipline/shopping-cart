@@ -3,7 +3,7 @@ export default function Home() {
     <>
       <h1>Welcome to Our Simple Shop</h1>
       <div>
-        <img alt="Featured store items"></img>
+        <img alt="Featured store items" src="https://picsum.photos/400"></img>
         <div>
           <h2>Best products that money can buy</h2>
           <p>
