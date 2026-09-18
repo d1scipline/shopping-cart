@@ -42,8 +42,8 @@ describe("ShopProduct Component Tests", () => {
       ></ShopProduct>,
     );
 
-    const increaseButton = screen.getByText("+");
-    const decreaseButton = screen.getByText("-");
+    const increaseButton = screen.getByLabelText(/increase/i);
+    const decreaseButton = screen.getByLabelText(/decrease/i);
     const input = screen.getByRole("spinbutton");
 
     //Increases it
@@ -91,7 +91,7 @@ describe("ShopProduct Component Tests", () => {
       ></ShopProduct>,
     );
 
-    const increaseButton = screen.getByText("+");
+    const increaseButton = screen.getByLabelText(/increase/i);
     const addCartButton = screen.getByText(/add to cart/i);
     const input = screen.getByRole("spinbutton");
 

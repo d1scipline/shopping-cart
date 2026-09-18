@@ -1,4 +1,6 @@
 import { useState } from "react";
+import styles from "./ShopProduct.module.css";
+import { MinusIcon, PlusIcon } from "lucide-react";
 
 export default function ShopProduct({ image, title, price, id, addToCart }) {
   const [quantity, setQuantity] = useState(1);
@@ -35,21 +37,23 @@ export default function ShopProduct({ image, title, price, id, addToCart }) {
   }
 
   return (
-    <div className="shop-product">
-      <img src={image} alt={title} />
-      <span>{title}</span>
-      <span>{price.toFixed(2)}$</span>
-      <div>
+    <div className={styles.card}>
+      <img className={styles.image} src={image} alt={title} />
+      <span className={styles.title}>{title}</span>
+      <span className={styles.price}>{price.toFixed(2)}$</span>
+      <div className={styles.inputContainer}>
         <button
+          className={styles.quantityButton}
           aria-label="decrease quantity"
           type="button"
           onMouseDown={(e) => e.preventDefault()}
           onClick={decrement}
         >
-          -
+          <MinusIcon></MinusIcon>
         </button>
 
         <input
+          className={styles.quantityInput}
           type="number"
           inputMode="numeric"
           min="1"
@@ -65,16 +69,18 @@ export default function ShopProduct({ image, title, price, id, addToCart }) {
         />
 
         <button
+          className={styles.quantityButton}
           aria-label="increase quantity"
           type="button"
           onMouseDown={(e) => e.preventDefault()}
           onClick={increment}
         >
-          +
+          <PlusIcon></PlusIcon>
         </button>
       </div>
 
       <button
+        className={styles.addCartButton}
         type="button"
         onClick={() => {
           const finalQty = quantity === "" ? 1 : Number(quantity);

@@ -1,0 +1,121 @@
+.card {
+  background-color: white;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-color: rgb(143, 131, 137);
+  border: solid 1px;
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: all 0.1s;
+}
+
+.card:hover {
+  transform: scale(1.025);
+  border-color: #ee964b;
+}
+
+.image {
+  aspect-ratio: 250/300;
+  object-fit: contain;
+  object-position: center;
+}
+
+.title {
+  margin-top: 8px;
+  margin-bottom: 8px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* Number of lines to show before "..." */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: rgb(37, 37, 37);
+  font-size: 18px;
+  text-align: center;
+}
+
+.price {
+  font-size: 18px;
+  color: rgb(37, 37, 37);
+  margin-top: auto;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.price:hover {
+  color: #ee964b;
+}
+
+.quantityButton {
+  all: unset;
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: #ee964b;
+  background-color: #ee964b;
+  color: rgb(37, 37, 37);
+}
+
+.quantityButton:focus-visible {
+  outline: 3px solid #0cbaba;
+  outline-offset: 2px;
+}
+
+.quantityButton:hover {
+  background-color: #0cbaba;
+  border-color: #0cbaba;
+  color: white;
+  cursor: pointer;
+}
+
+.quantityButton:active {
+  transform: scale(0.98);
+}
+
+.quantityInput {
+  all: unset;
+  text-align: center;
+  border: 1px solid rgb(37, 37, 37, 0.2);
+  border-radius: 4px;
+}
+
+.quantityInput:focus {
+  outline: 3px solid #0cbaba;
+  outline-offset: 2px;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  padding: 8px;
+  margin-bottom: 8px;
+}
+
+.addCartButton {
+  all: unset;
+  border: 1px solid;
+  border-radius: 8px;
+  border-color: #ee964b;
+  background-color: #ee964b;
+  color: rgb(37, 37, 37);
+  transition: all 0.1s;
+  padding: 6px;
+  font-weight: 600;
+}
+
+.addCartButton:focus-visible {
+  outline: 3px solid #0cbaba;
+  outline-offset: 2px;
+}
+
+.addCartButton:hover {
+  background-color: #0cbaba;
+  border-color: #0cbaba;
+  color: white;
+  cursor: pointer;
+}
+
+.addCartButton:active {
+  transform: scale(0.97);
+}
