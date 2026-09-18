@@ -1,0 +1,52 @@
+.heading {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.emptyCartContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.emptyHeading {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(37, 37, 37);
+}
+
+.basketColor {
+  color: #ee964b;
+}
+
+.emptyPara {
+  font-size: 16px;
+  color: rgb(37, 37, 37);
+  text-align: center;
+  text-align: center;
+}
+
+.shopLink {
+  text-decoration: none;
+  color: rgb(37, 37, 37);
+  background-color: #ee964b;
+  padding: 8px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.1s;
+}
+
+.shopLink:hover {
+  background-color: #0cbaba;
+  color: white;
+  transform: scale(1.02);
+}
+
+.shopLink:focus-visible {
+  transform: scale(0.97);
+}

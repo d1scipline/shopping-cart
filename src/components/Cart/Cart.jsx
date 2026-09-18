@@ -1,6 +1,8 @@
 import { Link, useOutletContext } from "react-router";
 import Summary from "../Summary/Summary";
 import CartProduct from "../CartProduct/CartProduct";
+import styles from "./Cart.module.css";
+import { ShoppingCartPlus } from "lucide-react";
 
 export default function Cart() {
   const { data, cart, setCart } = useOutletContext();
@@ -42,21 +44,29 @@ export default function Cart() {
 
   return (
     <>
-      <h1>Your Shopping Cart</h1>
+      <h1 className={styles.heading}>Your Shopping Cart</h1>
       {cart.size !== 0 ? (
         <>
           <div>{cartItems}</div>
           <Summary cart={cart} data={data}></Summary>
+          <button onClick={() => setCart(new Map())}>Checkout</button>
         </>
       ) : (
         <>
-          <div>
-            <img></img>
-            <span>Your Shopping Cart is Empty.</span>
-            <span>
+          <div className={styles.emptyCartContainer}>
+            <ShoppingCartPlus
+              className={styles.basketColor}
+              size={150}
+            ></ShoppingCartPlus>
+            <span className={styles.emptyHeading}>
+              Your Shopping Cart is Empty.
+            </span>
+            <span className={styles.emptyPara}>
               Discover unique items and buy them with the best prices.
             </span>
-            <Link to="/shop">Start Shopping</Link>
+            <Link className={styles.shopLink} to="/shop">
+              Start Shopping
+            </Link>
           </div>
         </>
       )}

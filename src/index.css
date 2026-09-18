@@ -90,3 +90,8 @@ html {
 html {
   margin-bottom: 32px;
 }
+
+* {
+  border: solid 1px red;
+  margin: 2px;
+}
