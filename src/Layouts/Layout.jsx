@@ -11,6 +11,7 @@ export default function Layout() {
   const [error, setError] = useState(false);
   const [cart, setCart] = useState(new Map());
   const url = "https://fakestoreapi.com/products";
+  const cartSize = Array.from(cart.values()).reduce((sum, val) => sum + val, 0);
   const getNavClass = ({ isActive }) =>
     `${styles.navElement} ${isActive ? styles.active : ""}`;
 
@@ -54,7 +55,7 @@ export default function Layout() {
             Cart
           </NavLink>
           <div className={styles.cart}>
-            <ShoppingCart size={28}></ShoppingCart> {cart.size}
+            <ShoppingCart size={28}></ShoppingCart> {cartSize}
           </div>
         </nav>
       </header>
