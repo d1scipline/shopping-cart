@@ -1,0 +1,36 @@
+.heading {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  color: rgb(37, 37, 37);
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  width: min(900px, 100%);
+}
+
+.subContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.header {
+  text-align: center;
+  color: rgb(37, 37, 37);
+}
+
+.paragraph {
+  text-align: center;
+  color: rgb(37, 37, 37);
+}
+
+.image {
+  border-radius: 8px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}

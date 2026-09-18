@@ -1,12 +1,18 @@
+import styles from "./Home.module.css";
+
 export default function Home() {
   return (
     <>
-      <h1>Welcome to Our Simple Shop</h1>
-      <div>
-        <img alt="Featured store items" src="https://picsum.photos/400"></img>
-        <div>
-          <h2>Best products that money can buy</h2>
-          <p>
+      <h1 className={styles.heading}>Welcome to Our Simple Shop</h1>
+      <div className={styles.mainContainer}>
+        <img
+          className={styles.image}
+          alt="Featured store items"
+          src="https://picsum.photos/400"
+        ></img>
+        <div className={styles.subContainer}>
+          <h2 className={styles.header}>Best products that money can buy</h2>
+          <p className={styles.paragraph}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
