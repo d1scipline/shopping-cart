@@ -46,11 +46,19 @@ export default function Cart() {
     <>
       <h1 className={styles.heading}>Your Shopping Cart</h1>
       {cart.size !== 0 ? (
-        <>
-          <div>{cartItems}</div>
-          <Summary cart={cart} data={data}></Summary>
-          <button onClick={() => setCart(new Map())}>Checkout</button>
-        </>
+        <div className={styles.cartContainer}>
+          <div className={styles.cartItemsContainer}>{cartItems}</div>
+          <div className={styles.summaryContainer}>
+            {" "}
+            <Summary cart={cart} data={data}></Summary>
+            <button
+              className={styles.checkoutButton}
+              onClick={() => setCart(new Map())}
+            >
+              Checkout
+            </button>
+          </div>
+        </div>
       ) : (
         <>
           <div className={styles.emptyCartContainer}>

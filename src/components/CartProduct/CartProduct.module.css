@@ -1,0 +1,32 @@
+.container {
+  display: flex;
+  height: 200px;
+  width: 80%;
+}
+
+.image {
+  aspect-ratio: 250/300;
+  object-fit: contain;
+}
+
+.subContainer {
+  width: 100%;
+  display: grid;
+}
+
+.infoContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputContainer {
+}
+
+.quantityContainer {
+}
+
+.quantityButton {
+}
+
+.deleteButton {
+}

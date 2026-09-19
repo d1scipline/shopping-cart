@@ -1,3 +1,5 @@
+import styles from "./CartProduct.module.css";
+
 export default function CartProduct({
   image,
   title,
@@ -9,25 +11,39 @@ export default function CartProduct({
   price,
 }) {
   return (
-    <div>
+    <div className={styles.container}>
       <img
+        className={styles.image}
         role="img"
         aria-label={"image of " + title}
         src={image}
         alt={"image of " + title}
       ></img>
-      <div>
-        <span>{title}</span>
-        <span>{price.toFixed(2)}$</span>
-        {quantity == 1 ? (
-          <button disabled>-</button>
-        ) : (
-          <button onClick={() => decreaseQuantity(id)}>-</button>
-        )}
-        <span>{quantity}</span>
-        <button onClick={() => increaseQuantity(id)}>+</button>
+      <div className={styles.subContainer}>
+        <div className={styles.infoContainer}>
+          {" "}
+          <span>{title}</span>
+          <span>{price.toFixed(2)}$</span>
+        </div>
+        <div className={styles.inputContainer}>
+          <div className={styles.quantityContainer}>
+            {" "}
+            {quantity == 1 ? (
+              <button disabled>-</button>
+            ) : (
+              <button onClick={() => decreaseQuantity(id)}>-</button>
+            )}
+            <span>{quantity}</span>
+            <button onClick={() => increaseQuantity(id)}>+</button>
+          </div>
+          <button
+            className={styles.deleteButton}
+            onClick={() => deleteProduct(id)}
+          >
+            Delete
+          </button>
+        </div>
       </div>
-      <button onClick={() => deleteProduct(id)}>Delete</button>
     </div>
   );
 }

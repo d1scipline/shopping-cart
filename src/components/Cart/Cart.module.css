@@ -50,3 +50,29 @@
 .shopLink:focus-visible {
   transform: scale(0.97);
 }
+
+.cartContainer {
+  width: min(1200px, 100%);
+  display: grid;
+  grid-template-columns: 7fr 3fr;
+  gap: 16px;
+}
+
+.cartItemsContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.summaryContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkoutButton {
+  margin: 8px;
+  align-self: flex-start;
+}
