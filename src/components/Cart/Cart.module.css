@@ -54,7 +54,7 @@
 .cartContainer {
   width: min(1200px, 100%);
   display: grid;
-  grid-template-columns: 7fr 3fr;
+  grid-template-columns: 7fr 4fr;
   gap: 16px;
 }
 
@@ -73,6 +73,32 @@
 }
 
 .checkoutButton {
-  margin: 8px;
+  all: unset;
+  margin-top: 16px;
   align-self: flex-start;
+  font-weight: 600;
+  background-color: #ee964b;
+  border-radius: 6px;
+  color: white;
+  padding: 8px 12px;
+  font-size: 20px;
+  user-select: none;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkoutButton:focus-visible {
+  outline: 2px solid #0cbaba;
+  outline-offset: 2px;
+}
+
+.checkoutButton:hover {
+  background-color: #0cbaba;
+  cursor: pointer;
+}
+
+.checkoutButton:active {
+  transform: translateY(1px);
 }

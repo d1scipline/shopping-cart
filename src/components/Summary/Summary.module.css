@@ -1,0 +1,53 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+  color: rgb(37, 37, 37);
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 600;
+  color: rgb(37, 37, 37);
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* Number of lines to show before "..." */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.quantity {
+  font-weight: 600;
+}
+
+.hr {
+}
+
+.totalPrice {
+  font-size: 24px;
+  font-weight: 600;
+}

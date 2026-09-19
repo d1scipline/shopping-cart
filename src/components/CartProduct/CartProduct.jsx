@@ -1,4 +1,9 @@
-import { MinusIcon, PlusIcon, TrashIcon } from "lucide-react";
+import {
+  MinusIcon,
+  PlusIcon,
+  ShoppingCartMinus,
+  TrashIcon,
+} from "lucide-react";
 import styles from "./CartProduct.module.css";
 
 export default function CartProduct({
@@ -60,7 +65,7 @@ export default function CartProduct({
             className={styles.deleteButton}
             onClick={() => deleteProduct(id)}
           >
-            <TrashIcon className={styles.deleteIcon}></TrashIcon> Remove
+            <ShoppingCartMinus></ShoppingCartMinus> Remove
           </button>
         </div>
       </div>

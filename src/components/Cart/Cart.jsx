@@ -55,6 +55,7 @@ export default function Cart() {
               className={styles.checkoutButton}
               onClick={() => setCart(new Map())}
             >
+              <ShoppingCartPlus></ShoppingCartPlus>
               Checkout
             </button>
           </div>

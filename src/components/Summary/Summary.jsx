@@ -1,4 +1,4 @@
-import { data } from "react-router";
+import styles from "./Summary.module.css";
 
 export default function Summary({ cart, data }) {
   const cartItems = [];
@@ -17,21 +17,25 @@ export default function Summary({ cart, data }) {
     .toFixed(2);
 
   return (
-    <div>
-      <span>Order Summary</span>
-      {cartItems.map((item) => {
-        return (
-          <div key={item.id}>
-            <div>
-              <span>{data[item.id - 1].title}</span>
-              <span>x{item.quantity}</span>
+    <div className={styles.container}>
+      <span className={styles.heading}>Order Summary</span>
+      <div className={styles.items}>
+        {cartItems.map((item) => {
+          return (
+            <div key={item.id} className={styles.itemContainer}>
+              <div className={styles.titleContainer}>
+                <span className={styles.title}>{data[item.id - 1].title}</span>
+                <span className={styles.quantity}>x{item.quantity}</span>
+              </div>
+              <span className={styles.price}>
+                {item.totalPrice.toFixed(2)}$
+              </span>
+              <hr className={styles.hr}></hr>
             </div>
-            <span>{item.totalPrice.toFixed(2)}$</span>
-          </div>
-        );
-      })}
-      <hr></hr>
-      <span>Total Price: {sum}$</span>
+          );
+        })}
+      </div>
+      <span className={styles.totalPrice}>Total Price: {sum}$</span>
     </div>
   );
 }
