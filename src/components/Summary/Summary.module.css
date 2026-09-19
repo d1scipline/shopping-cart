@@ -29,6 +29,7 @@
 .titleContainer {
   display: flex;
   justify-content: space-between;
+  gap: 4px;
 }
 
 .title {
