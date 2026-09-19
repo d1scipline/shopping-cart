@@ -64,8 +64,10 @@ export default function CartProduct({
           <button
             className={styles.deleteButton}
             onClick={() => deleteProduct(id)}
+            aria-label="Remove item"
           >
-            <ShoppingCartMinus></ShoppingCartMinus> Remove
+            <ShoppingCartMinus />
+            <span className={styles.buttonText}>Remove</span>
           </button>
         </div>
       </div>

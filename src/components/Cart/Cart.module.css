@@ -102,3 +102,10 @@
 .checkoutButton:active {
   transform: translateY(1px);
 }
+
+@media (max-width: 768px) {
+  .cartContainer {
+    display: flex;
+    flex-direction: column;
+  }
+}

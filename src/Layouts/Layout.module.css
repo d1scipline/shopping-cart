@@ -54,3 +54,19 @@
   composes: navElement;
   border-bottom: 2px solid rgb(238, 150, 75);
 }
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 24px;
+  }
+  .navElement {
+    font-size: 20px;
+  }
+
+  .cart {
+    font-size: 20px;
+  }
+  .icon {
+    height: 24px;
+  }
+}

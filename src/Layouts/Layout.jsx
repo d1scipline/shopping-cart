@@ -55,7 +55,8 @@ export default function Layout() {
             Cart
           </NavLink>
           <div className={styles.cart}>
-            <ShoppingCart size={28}></ShoppingCart> {cartSize}
+            <ShoppingCart size={28} className={styles.icon}></ShoppingCart>{" "}
+            {cartSize}
           </div>
         </nav>
       </header>
