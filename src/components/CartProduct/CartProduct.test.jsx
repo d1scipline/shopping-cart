@@ -53,9 +53,9 @@ describe("CartProduct Component Tests", () => {
       ></CartProduct>,
     );
 
-    const increaseButton = screen.getByRole("button", { name: "+" });
-    const decreaseButton = screen.getByRole("button", { name: "-" });
-    const deleteButton = screen.getByRole("button", { name: "Delete" });
+    const increaseButton = screen.getByLabelText(/increase/i);
+    const decreaseButton = screen.getByLabelText(/decrease/i);
+    const deleteButton = screen.getByRole("button", { name: /remove/i });
 
     await user.click(increaseButton);
     await user.click(decreaseButton);
@@ -82,7 +82,7 @@ describe("CartProduct Component Tests", () => {
         deleteProduct={deleteProduct}
       ></CartProduct>,
     );
-    const minusBtn = screen.getByRole("button", { name: "-" });
+    const minusBtn = screen.getByLabelText(/decrease/i);
     expect(minusBtn).toBeDisabled();
 
     await user.click(minusBtn);

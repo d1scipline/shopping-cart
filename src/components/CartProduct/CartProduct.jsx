@@ -1,3 +1,4 @@
+import { MinusIcon, PlusIcon, TrashIcon } from "lucide-react";
 import styles from "./CartProduct.module.css";
 
 export default function CartProduct({
@@ -22,25 +23,44 @@ export default function CartProduct({
       <div className={styles.subContainer}>
         <div className={styles.infoContainer}>
           {" "}
-          <span>{title}</span>
-          <span>{price.toFixed(2)}$</span>
+          <span className={styles.infoTitle}>{title}</span>
+          <span className={styles.infoPrice}>{price.toFixed(2)}$</span>
         </div>
         <div className={styles.inputContainer}>
           <div className={styles.quantityContainer}>
             {" "}
             {quantity == 1 ? (
-              <button disabled>-</button>
+              <button
+                disabled
+                className={styles.quantityButton}
+                aria-label="decrease quantity"
+              >
+                <MinusIcon></MinusIcon>
+              </button>
             ) : (
-              <button onClick={() => decreaseQuantity(id)}>-</button>
+              <button
+                onClick={() => decreaseQuantity(id)}
+                className={styles.quantityButton}
+                aria-label="decrease quantity"
+              >
+                {" "}
+                <MinusIcon></MinusIcon>
+              </button>
             )}
-            <span>{quantity}</span>
-            <button onClick={() => increaseQuantity(id)}>+</button>
+            <span className={styles.quantityText}>{quantity}</span>
+            <button
+              onClick={() => increaseQuantity(id)}
+              className={styles.quantityButton}
+              aria-label="increase quantity"
+            >
+              <PlusIcon></PlusIcon>
+            </button>
           </div>
           <button
             className={styles.deleteButton}
             onClick={() => deleteProduct(id)}
           >
-            Delete
+            <TrashIcon className={styles.deleteIcon}></TrashIcon> Remove
           </button>
         </div>
       </div>

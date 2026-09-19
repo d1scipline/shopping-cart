@@ -81,7 +81,7 @@ describe("Cart Page", () => {
     const cart = new Map([[1, 2]]);
     const { setCart } = renderCartWithContext({ cart });
 
-    const plusButtons = screen.getAllByRole("button", { name: "+" });
+    const plusButtons = screen.getAllByLabelText(/increase/i);
     await user.click(plusButtons[0]);
 
     expect(setCart).toHaveBeenCalledTimes(1);
@@ -94,7 +94,7 @@ describe("Cart Page", () => {
     const cart = new Map([[1, 99]]);
     const { setCart } = renderCartWithContext({ cart });
 
-    const plusButtons = screen.getAllByRole("button", { name: "+" });
+    const plusButtons = screen.getAllByLabelText(/increase/i);
     await user.click(plusButtons[0]);
 
     expect(setCart).not.toHaveBeenCalled();
@@ -105,7 +105,7 @@ describe("Cart Page", () => {
     const cart = new Map([[1, 3]]);
     const { setCart } = renderCartWithContext({ cart });
 
-    const minusButton = screen.getByRole("button", { name: "-" });
+    const minusButton = screen.getByLabelText(/decrease/i);
     await user.click(minusButton);
 
     expect(setCart).toHaveBeenCalledTimes(1);
@@ -121,7 +121,7 @@ describe("Cart Page", () => {
     ]);
     const { setCart } = renderCartWithContext({ cart });
 
-    const deleteButtons = screen.getAllByRole("button", { name: /delete/i });
+    const deleteButtons = screen.getAllByRole("button", { name: /remove/i });
     await user.click(deleteButtons[0]);
 
     expect(setCart).toHaveBeenCalledTimes(1);
