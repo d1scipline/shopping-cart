@@ -33,6 +33,9 @@ export default function Layout() {
       .finally(() => setLoading(false));
   }, []);
 
+  return <ErrorPage></ErrorPage>;
+
+  /*
   if (loading) {
     return <LoadingPage></LoadingPage>;
   }
@@ -64,4 +67,5 @@ export default function Layout() {
       </main>
     </div>
   );
+  */
 }
